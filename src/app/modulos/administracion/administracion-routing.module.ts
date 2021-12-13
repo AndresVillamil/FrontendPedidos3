@@ -4,6 +4,10 @@ import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona
 import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.component';
 import { EditarPersonaComponent } from './personas/editar-persona/editar-persona.component';
 import { EliminarPersonaComponent } from './personas/eliminar-persona/eliminar-persona.component';
+import { BuscarProductosComponent } from './productos/buscar-productos/buscar-productos.component';
+import { CrearProductosComponent } from './productos/crear-productos/crear-productos.component';
+import { EditarProductosComponent } from './productos/editar-productos/editar-productos.component';
+import { EliminarProductosComponent } from './productos/eliminar-productos/eliminar-productos.component';
 
 const routes: Routes = [
   {
@@ -21,6 +25,22 @@ const routes: Routes = [
   {
     path: "editar",
     component: EditarPersonaComponent
+  },
+  {
+    path:"buscar-producto",
+    component: BuscarProductosComponent
+  },
+  {
+    path: "editar-producto/:id",
+    component: EditarProductosComponent
+  },
+  {
+    path: "crear-producto",
+    component: CrearProductosComponent
+  },
+  {
+    path: "eliminar-producto/:id",
+    component: EliminarProductosComponent
   }
 
 ];

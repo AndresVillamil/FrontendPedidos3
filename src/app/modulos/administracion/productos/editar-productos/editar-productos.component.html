@@ -1,1 +1,55 @@
-<p>editar-productos works!</p>
+<div class="container">
+  <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()"> <!-- Change The Form Method From Here-->
+    <input type="hidden" formControlName="id"/>
+    <div class="card-panel z-depth-5">
+        <!-- Form Logo Section  -->
+
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <img src="https://i.imgur.com/ypAbAYt.png"
+                 alt="" class="responsive-img circle" style="width:100px;">
+                <p>Crear Productos</p>
+            </div>
+        </div>
+
+        <!-- Form Nombre Producto Input Section -->
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName = 'nombre' type="text" name="nombre" id="nombre">
+                <label for="nombre" class="active">Nombre Producto</label>
+            </div>
+        </div>
+
+        <!-- Form Password Input Section -->
+
+        <div class="col s12 m12 l12">
+          <div class="input-field">
+              <i class="material-icons prefix">person</i>
+              <input formControlName = 'precio' type="text" name="precio" id="precio">
+              <label for="precio" class="active">Precio Producto</label>
+          </div>
+      </div>
+
+      <div class="col s12 m12 l12">
+        <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <input formControlName = 'imagen' type="text" name="imagen" id="imagen">
+            <label for="imagen" class="active">Imagen Producto</label>
+        </div>
+    </div>
+
+            <!-- Form Button Section  -->
+
+        <div class="center">
+            <input [disabled]="!fgValidador.valid" type="submit" value="Enviar" name="envio"
+            class="btn waves-effect waves-light "
+            style="width:100%; background-color: #ff4081;">
+        </div>
+
+
+    </div>
+  </form>
+  </div>
+
